@@ -62,16 +62,16 @@ t<?php
         <div class="container">
             <div class="row">
             <div class="col">
-            <div class=" h4 text-light  mt-4 pt-2"> <a href="Home.php" class="nav-link"> <?php echo $_SESSION['name']; ?></a></div>
+            <div class=" h4 text-light  mt-4 pt-2"> <a href="Home.php" class="nav-link" style="color: #03989e;"> <?php echo $_SESSION['name']; ?></a></div>
             </div>
             <div class="col"></div>
             <div class="col">
-            <div class=" h4 text-light  mt-4 pt-2"> <a href="Logout.php" class="nav-link">Logout</a></div>
+            <div class=" h4 text-light  mt-4 pt-2"> <a href="Logout.php" style="color: #03989e;" class="nav-link">Logout</a></div>
             </div>
             </div>
         </div>
    
-        <div class="app-title" style=" font-family: 'Gilroy Bold';background:black;">
+        <div class="app-title" style=" font-family: 'Gilroy Bold';background:#131414;">
            <img src="logo.png" width="100%" height="10%" alt="">
         </div>
         <!-- Analizė -->
@@ -88,7 +88,7 @@ t<?php
             <!-- INCOME -->
             <div class="account">
                 <div class="income">
-                    <div class="title">
+                    <div class="title h5">
                         Income
                     </div>
                     <div style=" color: rgb(28, 192, 77); font-family: 'Gilroy Bold';">
@@ -101,7 +101,7 @@ t<?php
                 <!-- OUTCOME -->
                 <div class="outcome">
                     <!-- Total -->
-                    <div class="title">
+                    <div class="title h5">
                         Expenses
                     </div>
                     <div style=" color: #f0624d; font-family: 'Gilroy Bold';">

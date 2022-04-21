@@ -32,7 +32,7 @@ if ($email != false && $password != false) {
     <html>
 
     <head>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
             google.charts.load('current', {
                 'packages': ['corechart']
@@ -85,8 +85,8 @@ if ($email != false && $password != false) {
 
 <body>
 
-     <!-- BUDGET HEADER IKI DASHBOARD -->
-     <div class="budget-container mt-5">
+   <!-- BUDGET HEADER IKI DASHBOARD -->
+   <div class="budget-container mt-5">
         <div class="container">
             <div class="row">
             <div class="col">
@@ -106,38 +106,32 @@ if ($email != false && $password != false) {
         <div class="budget-header">
             <div class="balance">
                 <div class="title">
-                    Balance
+                    Bill
                 </div>
                 <div style=" color: #FFF;font-size: 2em;margin-top: 10px;font-family: 'Gilroy Bold';">
                     <small>€</small>
-                    <?php echo getBalance();  ?>
+                    <?php
+                     if (isset($_POST['SubmitDateFilterFormAnalysis'])) 
+                     {
+                        $date1 = mysqli_real_escape_string($con, $_POST['date1']);
+                        $date2 = mysqli_real_escape_string($con, $_POST['date2']);
+                        echo getExpense2($date1, $date2); 
+                     }
+                     else
+                     echo getExpense(); 
+                    ?>
                 </div>
             </div>
             <!-- INCOME -->
-            <div class="account">
-                <div class="income">
-                    <div class="title h5">
-                        Income
-                    </div>
-                    <div style=" color: rgb(28, 192, 77); font-family: 'Gilroy Bold';">
-                        <small>€</small>
-                        <?php echo getIncome();  ?>
-                    </div>
-                </div>
+       
+
                 <!-- CHART -->
-                <div class="chart"></div>
-                <!-- OUTCOME -->
-                <div class="outcome">
-                    <!-- Total -->
-                    <div class="title h5">
-                        Expenses
-                    </div>
-                    <div style=" color: #f0624d; font-family: 'Gilroy Bold';">
-                        <small>€</small>
-                        <?php echo getExpense();  ?>
-                    </div>
+                <div class="chart " id="piechart" style="width: 360px; height: 180px;">
+
                 </div>
-            </div>
+                <!-- OUTCOME -->
+
+         
         </div>
 
         <!-- SĄRAŠAS -->

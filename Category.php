@@ -142,7 +142,7 @@ if ($email != false && $password != false) {
                     <a href="Analysis.php" class="nav-link text-dark">Analysis </a>
                 </div>
                 <div class="tab7"> <a href="Prognosis.php" class="nav-link text-dark">Prognosis </a></div>
-                <div class="tab7"> <a href="#" class="nav-link text-dark">Forecasting </a></div>
+              
                 <!-- <div class="tab8"><input type="text">Date</div> -->
             </div>
             <!-- Pasirinkus tam tikrą skiltį, kitos paslėpiamos -->
