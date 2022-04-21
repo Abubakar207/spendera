@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2022 at 08:54 PM
+-- Generation Time: Apr 21, 2022 at 04:47 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -29,17 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `category_tb` (
   `Id` int(11) NOT NULL,
-  `Category` varchar(50) NOT NULL
+  `Category` varchar(50) NOT NULL,
+  `CategoryType` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `category_tb`
 --
 
-INSERT INTO `category_tb` (`Id`, `Category`) VALUES
-(1, 'Other'),
-(2, 'SALARY'),
-(4, 'New Category');
+INSERT INTO `category_tb` (`Id`, `Category`, `CategoryType`) VALUES
+(2, 'SALARY', 'Expense'),
+(6, 'Test', 'Income'),
+(7, 'SALARY', 'Income'),
+(9, 'SALARY2', 'Income');
 
 -- --------------------------------------------------------
 
@@ -64,15 +66,18 @@ CREATE TABLE `transaction_tb` (
 --
 
 INSERT INTO `transaction_tb` (`Id`, `Title`, `Category`, `Amount`, `TransactionType`, `TransactionDate`, `RTransaction`, `ImageUrl`, `UserId`) VALUES
-(5, '1', 'SALARY', 5000, 'Income', '2022-04-19', 'True', '', 3),
-(6, '2', 'Other', 500, 'Income', '2022-04-27', 'False', '', 3),
-(15, '1', 'FOOD', 500, 'Expense', '2022-04-27', 'False', '', 3),
-(16, '2', 'BILLS', 100, 'Expense', '2022-04-26', 'False', 'Screenshot (15).png', 3),
-(17, 'uhiu', 'SALARY', 500, 'Income', '2022-04-05', 'False', '', 3),
-(18, 'bjj', 'SALARY', 100, 'Income', '2022-04-21', 'False', '', 3),
-(19, 'hjhvhjv', 'Other', 200, 'Income', '2022-04-05', 'True', '', 3),
-(20, 'hvjhv', 'New', 500, 'Income', '2022-04-29', 'False', '', 3),
-(22, 'ncbvcb', 'Other', 261, 'Income', '2022-04-20', 'False', '', 3);
+(28, '1', 'SALARY', 500, 'Income', '2022-04-14', 'False', '', 3),
+(29, '2', 'Other', 500, 'Income', '2022-05-14', 'False', '', 3),
+(30, '3', 'SALARY', 500, 'Income', '2022-06-14', 'False', '', 3),
+(31, '1', 'FOOD', 400, 'Expense', '2022-04-14', 'False', '', 3),
+(32, '2', 'BILLS', 500, 'Expense', '2022-04-14', 'False', '', 3),
+(33, '3', 'BILLS', 500, 'Expense', '2022-06-14', 'False', '', 3),
+(34, '4', 'SALARY2', 1000, 'Income', '2022-04-14', 'False', '', 3),
+(35, '4', 'REPETITIVE', 500, 'Expense', '2022-06-15', 'False', '', 3),
+(36, '5', 'SERVICES', 500, 'Expense', '2022-04-14', 'False', '', 3),
+(37, '5', 'REPETITIVE', 700, 'Expense', '2022-04-15', 'False', 'home (3).png', 3),
+(38, '6', 'ENTERTAINMENT', 500, 'Expense', '2022-04-15', 'False', 'sincerely-media-_-hjiem5TqI-unsplash.jpg', 3),
+(39, '5', 'SALARY', 5000, 'Income', '2022-04-15', 'False', '', 3);
 
 -- --------------------------------------------------------
 
@@ -94,7 +99,7 @@ CREATE TABLE `users_tb` (
 --
 
 INSERT INTO `users_tb` (`UserId`, `UserName`, `UserEmail`, `UserPassword`, `UserCode`, `UserStatus`) VALUES
-(3, 'Abubakar', 'f180207@nu.edu.pk', '$2y$10$sCMwXdaOE4KfYoFE/atoXurjn/th3SBYZz5Haxpd99OllBESSMTe.', 0, 'verified'),
+(3, 'Abubakar', 'f180207@nu.edu.pk', '$2y$10$Nll.Cx4qoxlcjzkmbgAz5.7yd2vMmRLx5RsMQipj1ELhNHiXB4IaO', 0, 'verified'),
 (15, 'Abubakar', 'malikzada624@gmail.com', '$2y$10$dwaOop1UG6VGhqksORduS.vvoMkveHEJEYh/ZZIZX.RdY3mf7.hyC', 0, 'verified'),
 (16, 'Ali', 'ma3800406@gmail.com', '$2y$10$zU92dCWm4CRIIrPrY95cG.dyIZFtOKNkh35Uiz/5p0fEMyXiSA23u', 0, 'verified');
 
@@ -129,13 +134,13 @@ ALTER TABLE `users_tb`
 -- AUTO_INCREMENT for table `category_tb`
 --
 ALTER TABLE `category_tb`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `transaction_tb`
 --
 ALTER TABLE `transaction_tb`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `users_tb`
