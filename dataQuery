@@ -1,0 +1,3 @@
+SELECT YEAR('2023-08-29')*12 + MONTH('2023-08-29') - (YEAR('2022-04-05')*12 + MONTH('2022-04-05'));
+SELECT YEAR('2023-08-29')*12 + MONTH('2023-08-29') - (YEAR('2022-04-05')*12 + MONTH('2022-04-05')) as month;
+SELECT MIN(`TransactionDate`) as maxDate, MAX(`TransactionDate`) as minDate FROM transaction_tb
