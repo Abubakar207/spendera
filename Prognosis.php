@@ -124,7 +124,7 @@ t<?php
                 <div class="tab2">
                     <a class="nav-link  p-0  text-dark" href="Income.php">Income </a>
                 </div>
-                <div class="tab3  p-0 active">
+                <div class="tab3  p-0 ">
                     <a href="Home.php" class="nav-link text-dark">
                         Home
                     </a>
@@ -150,7 +150,7 @@ t<?php
                 <div class="tab6">
                     <a href="Analysis.php" class="nav-link text-dark">Analysis </a>
                 </div>
-                <div class="tab7"> <a href="Prognosis.php" class="nav-link text-dark">Prognosis </a></div>
+                <div class="tab7 active"> <a href="Prognosis.php" class="nav-link text-dark">Prognosis </a></div>
                 <!-- <div class="tab8"><input type="text">Date</div> -->
             </div>
             <!-- Pasirinkus tam tikrą skiltį, kitos paslėpiamos -->
